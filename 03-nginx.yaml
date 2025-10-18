@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: install nginx server
-    ansible.builtin.package:
+    ansible.builtin.package: # If we use package module it will work both dnf and apt
       name: nginx
       state: present
   - name: start and enable nginx server
