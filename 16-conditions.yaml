@@ -1,4 +1,4 @@
-- name: playbook control using ansible facts
+- name: playbook control using ansible gathering facts
   hosts: public
   become: yes
   tasks:
