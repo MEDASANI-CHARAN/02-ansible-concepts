@@ -1,7 +1,10 @@
-- name: variables from inventory
+- name: variables from args i.e., command line
   hosts: local
   connection: local
   tasks:
   - name: print course info
     ansible.builtin.debug:
       msg: "Hello I am learning {{ COURSE }}, Duration: {{ DURATION }}, Trainer is: {{ TRAINER }}"
+
+
+# run from CLI: ansible-playbook -i inventory.ini 11-vars-args.yaml -e "COURSE=args" -e "DURATION=10Min" -e "TRAINER=charan"
