@@ -1,6 +1,6 @@
 - name: nginx install & run
   hosts: frontend1
-  become: yes
+  become: yes # sudo access
   tasks:
   - name: install nginx server
     ansible.builtin.package: # If we use package module it will work both dnf and apt
