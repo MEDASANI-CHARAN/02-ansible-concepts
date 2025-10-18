@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    persons: "Ramesh,Suresh,Raheem,Joseph"
+    persons: "Ramesh,Suresh,Raheem,Joseph" # string
   tasks:
   - name: check undefined variable
     ansible.builtin.debug:
@@ -10,7 +10,7 @@
 
   - name: print names
     ansible.builtin.debug:
-      msg: "Hello {{ persons | split(',') }}"
+      msg: "Hello {{ persons }}"
 
   - name: convert map into list
     vars:
@@ -49,12 +49,12 @@
 
   - name: check IP address is valid or not
     vars:
-      ip: "300.567.980.789"
+      ip: "54.157.61.118"
     ansible.builtin.debug:
       msg: "{{ ip | ansible.utils.ipaddr }}"
 
   - name: check IP address is valid or not
     vars:
-      ip: "192.168.1.1"
+      ip: "54.209.52.82"
     ansible.builtin.debug:
       msg: "{{ ip | ansible.utils.ipaddr }}"
