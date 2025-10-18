@@ -1,13 +1,13 @@
 - name: task level variables
   hosts: local
   connection: local
-  vars:
+  vars: # this will aplly globally
     COURSE: DevOps with AWS
     DURATION: 100HR
     TRAINER: Charan
   tasks:
   - name: print course information
-    vars:
+    vars: # this will aplly locally
       COURSE: Ansible
       DURATION: 50HR
       TRAINER: Chinna
