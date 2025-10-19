@@ -12,16 +12,16 @@
 
   - name: redirect ls output to a file using command
     ansible.builtin.command: "ls -ltr"
-    register: command_output
+    register: command_output_command
   
   - name: print the output
     ansible.builtin.debug:
-      msg: "{{ command_output }}"
+      msg: "{{ command_output_command }}"
   
   - name: redirect ls output to a file using shell
     ansible.builtin.shell: "ls -ltr > /tmp/output.txt"
-    register: command_output
+    register: command_output_shell
   
   - name: print the output
     ansible.builtin.debug:
-      msg: "{{ command_output }}"
+      msg: "{{ command_output_shell }}"
