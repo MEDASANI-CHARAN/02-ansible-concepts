@@ -14,7 +14,7 @@
     ansible.builtin.command: "ls -ltr"
     register: command_output_command
   
-  - name: print the output
+  - name: print the command output
     ansible.builtin.debug:
       msg: "{{ command_output_command }}"
   
@@ -22,6 +22,6 @@
     ansible.builtin.shell: "ls -ltr > /tmp/output.txt"
     register: command_output_shell
   
-  - name: print the output
+  - name: print the shell output
     ansible.builtin.debug:
       msg: "{{ command_output_shell }}"
