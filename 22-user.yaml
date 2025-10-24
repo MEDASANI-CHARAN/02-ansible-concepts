@@ -1,6 +1,0 @@
-- name: user creaion
-  hosts: localhost
-  connection: local
-  tasks:
-  - name: check roboshop user exists or not
-    ansible.builtin.command: id roboshob
