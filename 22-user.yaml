@@ -1,5 +1,5 @@
 - name: user creaion
-  hosts: local
+  hosts: localhost
   connection: local
   tasks:
   - name: check roboshop user exists or not
