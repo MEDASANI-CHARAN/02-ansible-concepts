@@ -3,7 +3,7 @@ regions:
 - us-east-1
 filters:
   tag:Name:
-    - frontend
+    - ansible
   instance-state-name : running
 hostnames:
   - ip-address
