@@ -2,7 +2,7 @@
   hosts: dynamic_ansible
   become: yes
   tasks: 
-  - name: install nginxa
+  - name: install nginx
     ansible.builtin.dnf:
       name: nginx
       state: installed
@@ -12,4 +12,3 @@
       name: nginx
       state: started
       enabled: yes
-      
