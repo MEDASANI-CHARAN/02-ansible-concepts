@@ -3,8 +3,8 @@ regions:
 - us-east-1
 keyed_groups:
 - key: tags.Name
-  prefix: "dynamic"
-  separator: "-"
+  prefix: "dynamic" # If i want to mention the name as "dynaic-ansible"
+  separator: "_"
 filters:
   tag:Name:
     - ansible
